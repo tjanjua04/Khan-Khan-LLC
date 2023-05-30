@@ -1,6 +1,6 @@
 # Khan-Khan-LLC
 
-BlackJack
+Casino Black Jack
 
 Final project for CIS-7
 
