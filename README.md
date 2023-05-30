@@ -1,2 +1,1 @@
-# Khan-Khan-LLC
-Final project for CIS-7
+This project is about successfully recreating the popular game Black Jack
