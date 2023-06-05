@@ -1,0 +1,26 @@
+Team name, members
+
+Azka Khan, Tauheed Janjua
+
+Project Information and details:
+
+a. In this program, we are matching physicians to countries based on their language fluency and specialization.
+
+b. The solutions implemented in our program are to use doubles instead of int type values when estimating the probability
+
+c. We calculated the probability of a physician matching with a specific country by calculating 1/(the number of possibilities). The number of
+possibilities is calculated by multiplying the number of languages by the number of countries. We use a random number generator to generate a random 
+number between 0 and 9, and we plug this number into the second dimension of the array to select a random country to match to the user. We also use 
+switch statements to 
+
+d. The program's objective is to match a physician to a specific region based on the language they are fluent in and their medical specialization. The 
+program will ask the user to enter their language fluency and specialization, and the program will match the user to a country accordingly.
+
+e. Discrete structures are implemented into the program by use of probability, switch statements, and arrays
+
+f. One of the limitations of this program is that if the user enters a number that is not 1-5 for the language fluency question, the program will display
+an error message, but it will not make the user enter a valid answer. Another limitation is that when the program asks the user to pick a 
+specialization, if the user does not enter 1-5, the code will continue to run.
+
+g. A great recommendation on improving the limitations of the program is to write a do while loop for all choices and have the while be if the user does 
+not pick the correct number.
