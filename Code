@@ -1,74 +1,94 @@
 #include <iostream>
-#include <cstdlib>
 #include <string>
 #include <ctime>
-#include <iomanip>
-#include <random>
+#include <cstdlib>
 
 using namespace std;
 
-const int ofDECK = 4;
-const int perDECK = 13;
-const float ADVANTAGE [perDECK] = {9.8f, 13.4f, 18.0f, 23.2f, 23.9f, 14.3f, 5.4f, -4.3f, -16.9f, -16.9f, -16.9f, -16.0f};
-const int DECK [perDECK] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10}
-const string CARDS [perDECK] = {"ACE", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
-const string SUIT [ofDECK] = {"HEARTS", "DIAMONDS", "CLUBS", "SPADES"};
-const string COLORS[2] = {"RED", "BLACK"};
-
-struct card {
-
-  int deck_value;
-  string deck_name;
-  string suit;
-  string color;
-
-};
-
-
-class Deck{
-//shuffle the deck
-//draw the cards
-}
-
-class Hand{
-//add card
-//display card
-}
-
-class Game{
-// show deck
-// show hand
-
-// hit or stand
-// show dealer and player hand
-}
-
-
-
-
-
-
 int main(){
-// summon the game
-// run the game
 
-return 0;
+  double numOfLanguages = 5.0;
+  double numOfCountries = 10.0;
+  // 5 languages for 10 countries
+  string countries[5][10] = {
+    {"United States of America" , "England", "Canada", "Australia", "New Zealand", "Ireland", "Denmark", "South Africa", "Singapore",  "Netherlands"},
+    
+    {"Spain", "Mexico", "Puerto Rico", "Guatemala", "El Salvador", "Columbia", "Cuba", "Belize", "Costa Rica", "Peru"},
+    
+    {"Pakistan", "India", "Bangladesh", "Nepal", "Fiji", "Trinidad and Tobago", "Mauritius", "Suriname", "Guyana", "Uganda"},
+    
+    {"Russia", "Armenia", "Ukranie", "Latvia", "Kazakhstan", "Belarus", "Lithuania", "Uzbekistan", "Tajikistan", "Estonia"},
+    
+    {"Saudi Arabia", "Egypt", "Iraq", "Iran", "Palenstine", "Syria", "Jordan", "Yemen", "Lebanon", "Morocco"}
+    
+    };
+  // integers for the input values
+  int languageChoice;
+	int specialtyChoice;
+
+  // asking user their prefered language
+	cout << "Which language are you fluent in?" << endl;
+	cout << "1. English\n";
+	cout << "2. Spanish\n";
+	cout << "3. Urdu\n";
+	cout << "4. Russian\n";
+	cout << "5. Arabic\n";
+	cin >> languageChoice;
+
+  // asking user their specialty
+  //common worldwide specializations
+	cout << "\nWhat are you specializing in?" << endl;
+	cout << "1. Internal Medicine\n";
+	cout << "2. Neurology\n";
+	cout << "3. Pediatrics\n";
+	cout << "4. Psychiatry\n";
+	cout << "5. Toxicology\n";
+	cin >> specialtyChoice;
+
+  // probability
+  double probability = numOfLanguages * numOfCountries;
+  double prob = (1 / probability) * 100;
+	srand(time(0));
+	int country = rand() % 10;
+
+  // switch statements
+  switch(languageChoice)
+  {
+    // English
+    case 1: 
+      cout << "\nYour chosen country is " << countries[languageChoice-1][country] << endl;
+      cout << "\nThe probability matching to " << countries[languageChoice-1][country] << " with your language fluency is 1/" << probability << " or "<< prob << "%" << endl;
+      break;
+
+    // Spanish
+    case 2:
+      cout << "\nYour chosen country is " << countries[languageChoice-1][country] << endl;
+      cout << "\nThe probability matching to " << countries[languageChoice-1][country] << " with your language fluency is 1/" << probability << " or "<< prob << "%" << endl;
+      break;
+
+    // Urdu
+    case 3:
+      cout << "\nYour chosen country is " << countries[languageChoice-1][country] << endl;
+      cout << "\nThe probability matching to " << countries[languageChoice-1][country] << " with your language fluency is 1/" << probability << " or "<< prob << "%" << endl;
+      break;
+
+    // Russian
+    case 4:
+      cout << "\nYour chosen country is " << countries[languageChoice-1][country] << endl;
+      cout << "\nThe probability matching to " << countries[languageChoice-1][country] << " with your language fluency is 1/" << probability << " or "<< prob << "%" << endl;
+      break;
+
+    // Arabic
+    case 5:
+      cout << "\nYour chosen country is " << countries[languageChoice-1][country] << endl;
+      cout << "\nThe probability matching to " << countries[languageChoice-1][country] << " with your language fluency is 1/" << probability << " or "<< prob << "%" << endl;
+      break;  
+
+    default:
+      cout << "\nYou have chosen an invalid choice\n";
+         
+  }
+
+  // sample size
+  cout << "\nThe sample space is the amount of languages multiplied by the amount of countries. 5 * 10 = 50";  
 }
-// one deck
-// reshuffle every hand
-// as close to 21
-// if > 21 = bust
-
-/*
-
-integers for shuffling, each car, etc
-
-random function (rand) that will shuffle the cards for us
-
-Keep track of the hands that are dealt and display it after
-
-Output the dealers and players hand
-
-Repeat
-
-*/
