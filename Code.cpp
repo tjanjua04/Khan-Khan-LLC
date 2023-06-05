@@ -90,5 +90,6 @@ int main(){
   }
 
   // sample size
-  cout << "\nThe sample space is the amount of languages multiplied by the amount of countries. 5 * 10 = 50";  
+  cout << "\nThe sample space is the amount of languages multiplied by the amount of countries. 5 * 10 = 50";
+	return 0;
 }
