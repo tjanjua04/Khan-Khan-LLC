@@ -5,12 +5,7 @@
 
 using namespace std;
 
-int main(){
-
-  double numOfLanguages = 5.0;
-  double numOfCountries = 10.0;
-  // 5 languages for 10 countries
-  string countries[5][10] = {
+const string countries[5][10] = {
     {"United States of America" , "England", "Canada", "Australia", "New Zealand", "Ireland", "Denmark", "South Africa", "Singapore",  "Netherlands"},
     
     {"Spain", "Mexico", "Puerto Rico", "Guatemala", "El Salvador", "Columbia", "Cuba", "Belize", "Costa Rica", "Peru"},
@@ -19,9 +14,12 @@ int main(){
     
     {"Russia", "Armenia", "Ukranie", "Latvia", "Kazakhstan", "Belarus", "Lithuania", "Uzbekistan", "Tajikistan", "Estonia"},
     
-    {"Saudi Arabia", "Egypt", "Iraq", "Iran", "Palenstine", "Syria", "Jordan", "Yemen", "Lebanon", "Morocco"}
-    
-    };
+    {"Saudi Arabia", "Egypt", "Iraq", "Iran", "Palenstine", "Syria", "Jordan", "Yemen", "Lebanon", "Morocco"} 
+};
+
+void getCountry(int languageChoice);
+
+int main(){
   // integers for the input values
   int languageChoice;
 	int specialtyChoice;
@@ -45,43 +43,32 @@ int main(){
 	cout << "5. Toxicology\n";
 	cin >> specialtyChoice;
 
-  // probability
-  double probability = numOfLanguages * numOfCountries;
-  double prob = (1 / probability) * 100;
-	srand(time(0));
-	int country = rand() % 10;
-
   // switch statements
   switch(languageChoice)
   {
     // English
     case 1: 
-      cout << "\nYour chosen country is " << countries[languageChoice-1][country] << endl;
-      cout << "\nThe probability matching to " << countries[languageChoice-1][country] << " with your language fluency is 1/" << probability << " or "<< prob << "%" << endl;
+    getCountry(languageChoice);
       break;
 
     // Spanish
     case 2:
-      cout << "\nYour chosen country is " << countries[languageChoice-1][country] << endl;
-      cout << "\nThe probability matching to " << countries[languageChoice-1][country] << " with your language fluency is 1/" << probability << " or "<< prob << "%" << endl;
+    getCountry(languageChoice);
       break;
 
     // Urdu
     case 3:
-      cout << "\nYour chosen country is " << countries[languageChoice-1][country] << endl;
-      cout << "\nThe probability matching to " << countries[languageChoice-1][country] << " with your language fluency is 1/" << probability << " or "<< prob << "%" << endl;
+    getCountry(languageChoice);
       break;
 
     // Russian
     case 4:
-      cout << "\nYour chosen country is " << countries[languageChoice-1][country] << endl;
-      cout << "\nThe probability matching to " << countries[languageChoice-1][country] << " with your language fluency is 1/" << probability << " or "<< prob << "%" << endl;
+    getCountry(languageChoice);
       break;
 
     // Arabic
     case 5:
-      cout << "\nYour chosen country is " << countries[languageChoice-1][country] << endl;
-      cout << "\nThe probability matching to " << countries[languageChoice-1][country] << " with your language fluency is 1/" << probability << " or "<< prob << "%" << endl;
+    getCountry(languageChoice);
       break;  
 
     default:
@@ -90,6 +77,21 @@ int main(){
   }
 
   // sample size
-  cout << "\nThe sample space is the amount of languages multiplied by the amount of countries. 5 * 10 = 50";
-	return 0;
+  cout << "\nThe sample space is the amount of languages multiplied by the amount of countries. 5 * 10 = 50";  
+  
+  return 0;
+}
+
+void getCountry(int languageChoice)
+{
+
+  double numOfLanguages = 5.0;
+  double numOfCountries = 10.0;
+  double probability = numOfLanguages * numOfCountries;
+  double prob = (1 / probability) * 100;
+	srand(time(0));
+	int country = rand() % 10;
+  
+  cout << "\nYour chosen country is " << countries[languageChoice-1][country] << endl;
+  cout << "\nThe probability matching to " << countries[languageChoice-1][country] << " with your language fluency is 1/" << probability << " or "<< prob << "%" << endl;
 }
